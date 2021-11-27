@@ -6017,6 +6017,28 @@ const heroes = {
       }
     }
   },
+  zahhak: {
+    name: 'Zahhak',
+    element: element.earth,
+    classType: classType.warrior,
+    baseAtk: 1177,
+    form: [elements.target_has_buff],
+    skills: {
+      s1: {
+        rate: 1.1,
+        pow: 1.0,
+        mult: () => elements.target_has_buff.value() ? 1.3 : 1.0,
+        multTip: () => ({ target_has_buff: 30 }),
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.9,
+        pow: 1,
+        single: true,
+      },
+    }
+  },
   zealot_carmainerose: {
     name: 'Zealot Carmainerose',
     element: element.fire,
